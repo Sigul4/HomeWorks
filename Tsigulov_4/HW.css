@@ -1,0 +1,291 @@
+html{
+    background-color: #0d5825;
+}
+.cite{
+    left: 32%;
+    text-align:center;
+    color: white;
+    font-size: 25px;
+}
+.blockquote p::before {
+    content: """;
+}
+
+.cite p::before {
+    content: "“";
+}
+.cite p::after {
+    content: "”";
+}
+
+.tuz{
+    transition-duration: 2s;
+    position:absolute;
+	left:620px;
+	top:293px;
+	width: 150px;
+    transform: rotate(-7deg);
+    z-index: 2;
+    border-radius:13px;
+    transition-property: top;
+  }
+.tuz:hover{
+    top: 250px;
+    transition-duration: 700ms;
+}
+.tuz:not(:hover) {
+    transition: 200ms;
+  }
+
+
+  .tuz_kop4onuy{
+    position:absolute;
+	left:580px;
+	top:290px;
+	width: 150px;
+    transform: rotate(-20deg);
+    z-index: 1;
+    border-radius:13px;
+  }
+
+  .tuz_kop4onuy:hover{
+    top: 250px;
+    transition-duration: 700ms;
+}
+.tuz_kop4onuy:not(:hover) {
+    transition: 200ms;
+  }
+
+
+  .Not_tuz{
+    position:absolute;
+	left:680px;
+	top:320px;
+	width: 150px;
+    transform: rotate(13deg);
+    z-index: 3;
+    border-radius:13px;
+  }
+
+.Not_tuz:hover{
+    top: 250px;
+    transition-duration: 700ms;
+}
+.Not_tuz:not(:hover) {
+    transition: 200ms;
+  }
+
+@keyframes vys{
+    0% {transform: rotate(0deg);}
+    30% {transform: rotate(-20deg);}
+    70% {transform: rotate(20deg);}
+    100% {transform: rotate(0deg);}
+}
+.ramka{
+    position:relative;
+	left:1200px;
+	top:100px;
+	width: 150px;
+    animation: vys 3s;
+    animation-iteration-count: 15;
+    animation-direction: normal;
+}
+
+div section{
+    height: 340px;
+    width: 340px;
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    background-color: white;
+}
+
+
+.zad1{
+	left:65px;
+	top:65px;
+height: 100px;
+width: 100px;
+position:absolute;
+background: rgb(240, 29, 64);
+z-index: 1;
+}
+.zad2{
+	left:110px;
+	top:110px;
+height: 100px;
+width: 100px;
+position:absolute;
+background: rgb(74, 38, 202);
+z-index: 2;
+}
+.zad3{
+left:150px;
+top:150px;
+height: 100px;
+width: 100px;
+position:absolute;
+background: rgb(6, 192, 62);
+z-index: 1;
+}
+
+
+
+.wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    min-height: 100hv;
+    z-index: 4;
+}
+
+
+
+
+
+
+.header {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: -200px;
+    height: 800px;
+    width: 250px;
+    background: rgba(38, 41, 39, 0.473);
+    z-index: 7;
+    transition: 0.5s ease-out;
+    color: white;
+}
+
+.header:hover{
+    transition: left 0.3s ease-in-out;
+    left: 0px;
+}
+
+.header::after{
+    transition: opacity .3s ease-in-out;
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: rotate(90deg) translateY(-50%);
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+.nav{
+    
+    display: block;
+    font-size: 14px;
+    margin-left:30px;
+    margin-top: 30px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 7px;
+  }
+  
+  li:before {
+      background: orange;
+      background-size: 12px 12px;
+      border: black;
+      border-width: 4px;
+      transform: rotate(45deg);
+      display: inline-block;
+      width: 12px; 
+      height: 12px;
+      content:"";
+      margin-right: 10px;
+  }
+
+
+.naw-list{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+.nav-list a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-list li{
+    color: inherit;
+    text-decoration: none;
+}
+
+a{
+    transition: 1s;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: yellow;
+    
+}
+
+.animation-holder{
+    width: 300px;
+    background: white;
+    height: 300px;
+    top: 330px;
+    left: 40px;
+    position: relative;
+}
+
+
+@keyframes runBox {
+    0% {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: red;
+    }
+
+    25% {
+        background: blue;
+        position: absolute;
+        left: 0;
+        top: calc(100% - 100px);
+
+    }
+
+    50% {
+        background: green;
+        position: absolute;
+        left: calc(100% - 100px);
+        top: calc(100% - 100px);
+    }
+
+    75% {
+        background: purple;
+        position: absolute;
+        left: calc(100% - 100px);
+        top: 0;
+    }
+
+    100% {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: red;
+
+    }
+}
+.animation-holder .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: runBox 1s ease-in-out infinite;
+}
